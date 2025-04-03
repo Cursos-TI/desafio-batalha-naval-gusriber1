@@ -14,21 +14,39 @@ int main() {
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
 
   // Posicionando um navio na horizontal
-  int navioHorizontal = 3; // Tamanho do navio
-  int navioHorLinInicio = 1; // Linha inicial
-  int navioHorColInicio = 2; // Coluna inicial
+  int navio1 = 3; // Tamanho do navio
+  int navio1LinInicio = 1; // Linha inicial
+  int navio1ColInicio = 2; // Coluna inicial
 
-  for (int i = 0; i < navioHorizontal; i++) {
-      tabuleiro[navioHorLinInicio][navioHorColInicio + i] = 3; // Mantém a linha fixa e muda a coluna
+  for (int i = 0; i < navio1; i++) {
+      tabuleiro[navio1LinInicio][navio1ColInicio + i] = 3; // Mantém a linha fixa e muda a coluna
   }
 
     // Posicionando um navio na vertical
-    int navioVertical = 3; // Tamanho do navio
-    int navioVerLinInicio = 1; // Linha inicial
-    int navioVerColInicio = 6; // Coluna inicial
+    int navio2 = 3; // Tamanho do navio
+    int navio2LinInicio = 1; // Linha inicial
+    int navio2ColInicio = 6; // Coluna inicial
 
-    for (int i = 0; i < navioVertical; i++) {
-        tabuleiro[navioVerLinInicio + i][navioVerColInicio] = 3; // Mantém a coluna fixa e muda a linha
+    for (int i = 0; i < navio2; i++) {
+        tabuleiro[navio2LinInicio + i][navio2ColInicio] = 3; // Mantém a coluna fixa e muda a linha
+    }
+
+    // Posicionando um navio na diagonal 1
+    int navio3 = 3; // Tamanho do navio
+    int navio3LinInicio = 2; // Linha inicial
+    int navio3ColInicio = 0; // Coluna inicial
+
+    for (int i = 0; i < navio3; i++) {
+        tabuleiro[navio3LinInicio + i][navio3ColInicio + i] = 3; // Muda a coluna e muda a linha
+    }
+
+    // Posicionando um navio na diagonal 2
+    int navio4 = 3; // Tamanho do navio
+    int navio4LinInicio = 4; // Linha inicial
+    int navio4ColInicio = 4; // Coluna inicial
+
+    for (int i = 0; i < navio4; i++) {
+        tabuleiro[navio4LinInicio - i][navio4ColInicio - i] = 3; // Muda a coluna e muda a linha
     }
 
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
